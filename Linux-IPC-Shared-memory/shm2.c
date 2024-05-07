@@ -24,8 +24,7 @@ fprintf(stderr, "shmget failed\n"); exit(EXIT_FAILURE);
 shared_memory=shmat(shmid, (void *)0, 0);
 if (shared_memory == (void *)-1){
 fprintf(stderr,	"shmat	failed\n"); exit(EXIT_FAILURE);}
-
-printf("Memory Attached at%p  \n",shared_memory); 
+printf("Memory Attached at %x\n", (int) shared_memory); 
 shared_stuff = (struct shared_use_st *)shared_memory; 
 while(running)
 {

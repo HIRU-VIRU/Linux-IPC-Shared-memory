@@ -29,7 +29,11 @@ fprintf(stderr,	"shmat	failed\n"); exit(EXIT_FAILURE);
 }
 
 
-printf("Memory Attached at %p \n", shared_memory);
+
+
+
+printf("Memory Attachedprintf("Memory Attached at%x  \n",(int)shared_memory);
+
 shared_stuff = (struct shared_use_st *) shared_memory;
 shared_stuff->written_by_you	=	0;
  while(running)
